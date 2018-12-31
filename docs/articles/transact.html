@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Transactions &amp; Requests | M-Pesa.Net </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Transactions &amp; Requests | M-Pesa.Net ">
+    <meta name="generator" content="docfx 2.40.6.0">
+    
+    <link rel="shortcut icon" href="../images/logo-small.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo-small.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="transactions--requests">Transactions &amp; Requests</h1>
+
+<p>This page will be divided into three major segments:</p>
+<ul>
+<li>LNM Transactions</li>
+<li>B2B/C Transactions</li>
+<li>Utilities</li>
+</ul>
+<p>Before we begin, it is good to appreciate that almost of all Daraja Transactions are asynchronous meaning that you will usually be waiting for callbacks on <code>queURL</code> etc.
+In the same sprit, apart from OAuth, all other transactions will return an <code>awaitable</code> (<code>System.Threading.Tasks.Task</code>)</p>
+<p>The resolved response will interface <code>RestSharp.IRestResponse&lt;T&gt;</code> where <code>T</code> is determined by the specific transaction.
+Checkout the different <a href="/api/Safaricom.Mpesa.Responses.html">response types</a> we have.</p>
+<h2 id="lipa-na-mpesa">Lipa Na Mpesa</h2>
+<p>To use these APIs make sure that <code>LNMShortCode &amp; LNMPassWord</code> are set.</p>
+<h2 id="lnm-payment">LNM Payment</h2>
+<p>This is used trigger an LNM Transaction.</p>
+<pre><code class="lang-c#">Api mpesa = new Api(Env.Sandbox, &quot;consumerKey&quot;, &quot;consumerSecret&quot;, configs);
+var res = await mpesa.LipaNaMpesaOnline(msisdn, 100, callbackURL, &quot;Some Ref&quot;);
+var transactionId = res.Data.CheckoutRequestID;
+</code></pre>
+<h2 id="utilities">Utilities</h2>
+<h3 id="account-balance">Account Balance</h3>
+<p>This API request Daraja for a callback with the account balance.</p>
+<pre><code class="lang-c#">Api mpesa = new Api(Env.Sandbox, &quot;consumerKey&quot;, &quot;consumerSecret&quot;, configs);
+var accountyParty = new IdentityParty(configs.ShortCode, IdentityParty.IdentifierType.SHORTCODE);
+var res = await mpesa.AccountBalance(partyA, &quot;some URL&quot;, &quot;some URL&quot;);
+var transactionId = res.Data.ConversationID;
+</code></pre>
+<p><em>See Also:</em></p>
+<ul>
+<li><a href="/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_AccountBalance_">AccountBalance API documentation</a></li>
+<li>The expected <a href="https://developer.safaricom.co.ke/docs?json#account-balance-api">Daraja AccountBalance Callback Response</a> to the <code>resultURL</code>.</li>
+<li><a href="/api/Safaricom.Mpesa.Responses.AccountBalanceResponse.html"> AccountBalance API Response</a></li>
+</ul>
+<h3 id="authentication">Authentication</h3>
+<p>Daraja uses OAuth2.0 hence expects a header <code>&quot;Authorization&quot;, &quot;Basic &quot; + encoded&quot;</code>.
+Remember Daraja tokens expire after 60min. Don't worry though, this is all taken care in this library.</p>
+<pre><code class="lang-c#">Api mpesa = new Api(Env.Sandbox, &quot;consumerKey&quot;, &quot;consumerSecret&quot;, configs);
+var token = mpesa.Auth().Data.AccessToken
+</code></pre>
+<p>or asynchronous</p>
+<pre><code class="lang-c#">Api mpesa = new Api(Env.Sandbox, &quot;consumerKey&quot;, &quot;consumerSecret&quot;, configs);
+var res = await mpesa.AuthAsync();
+var token = res.Data.AccessToken
+</code></pre>
+<p><em>See Also:</em></p>
+<ul>
+<li><a href="/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_Auth_">Auth API Documentation</a></li>
+<li><a href="/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_AuthAsync_">Auth Async API Documentation</a></li>
+<li>The expected <a href="https://developer.safaricom.co.ke/docs?json#authentication">Daraja Callback Response</a></li>
+<li><a href="/api/Safaricom.Mpesa.Responses.AuthResponse.html">Auth API Response</a></li>
+</ul>
+<h3 id="c2b-register">C2B Register</h3>
+<p>In the <a href="/articles/terminology.html">Terminology</a> page, we have discussed several terms and noted that C2B transactions are triggered by the user.
+This call is used to register the validation and confirmation URLs and can only be run once in <a href="/api/Safaricom.Mpesa.Api.Env.html#Safaricom_Mpesa_Api_Env_Production">Production Environment</a>, so use it smartly. You can always consult Daraja and request changes, though this may take time.</p>
+<pre><code class="lang-c#">var res = await mpesa.C2BRegister(confirmationURL, validationURL)
+var transactionId = res.Data.ConversationID;
+</code></pre>
+<p><em>See Also:</em></p>
+<ul>
+<li><a href="/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_C2BRegister_">C2BRegister API Documentation</a></li>
+<li>The expected <a href="https://developer.safaricom.co.ke/docs?json#c2b-api">Daraja Responses</a></li>
+<li><a href="/api/Safaricom.Mpesa.Responses.C2BRegisterResponse.html">C2BRegister API Response</a></li>
+</ul>
+<h3 id="reversal">Reversal</h3>
+<p>Sometimes you just want your money back(We wont judge ;)) and hence the <a href="/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_ReversalRequest_">Reversal</a> Api.</p>
+<pre><code class="lang-c#">Api mpesa = new Api(Env.Sandbox, &quot;consumerKey&quot;, &quot;consumerSecret&quot;, configs);
+var res = await mpesa.ReversalRequest(&quot;LKXXXX1234&quot;, 100, queueUrl, resultUrl );
+var transactionId = res.Data.ConversationID;
+</code></pre>
+<p><em>See Also:</em></p>
+<ul>
+<li><a href="/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_Reversal_">Reversal API Documentation</a></li>
+<li>The expected <a href="https://developer.safaricom.co.ke/docs?json#reversal">Daraja Responses</a></li>
+<li><a href="/api/Safaricom.Mpesa.Responses.ReversalResponse.html">Reversal API Response</a></li>
+</ul>
+<h3 id="transction-status">Transction Status</h3>
+<p>The Transaction Status API is a very powerful API that can be important when you did not get the callback.</p>
+<pre><code class="lang-c#">Api mpesa = new Api(Env.Sandbox, &quot;consumerKey&quot;, &quot;consumerSecret&quot;, configs);
+var res = await mpesa.TransactionStatus(&quot;MKXXXX1234&quot;, queueUrl, resultUrl );
+var transactionId = res.Data.ConversationID;
+</code></pre>
+<p><em>See Also:</em></p>
+<ul>
+<li><a href="/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_TransactionStatus_">TransactionStatus API Documentation</a></li>
+<li>The expected <a href="https://developer.safaricom.co.ke/docs?json#transaction-status">Daraja Responses</a></li>
+<li><a href="/api/Safaricom.Mpesa.Responses.TransactionStatusResponse.html">TransactionStatus API Response</a></li>
+</ul>
+</article>
+          </div>
+          <div class="contribution-panel mobile-hide">
+              <a href="https://github.com/geofmureithi/Mpesa.Net/blob/feature/docs/docfx_project/articles/transact.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Powered by DocFX | Copyright <a href="https://mureithi.me">Geoffrey Mureithi</a>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
