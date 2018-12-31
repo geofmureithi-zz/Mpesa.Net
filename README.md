@@ -65,7 +65,7 @@ dotnet test
 
 ## Meta
 
-Your Name – [@GeoMureithi](https://twitter.com/geomureithi)
+Geoff Mureithi – [@GeoMureithi](https://twitter.com/geomureithi)
 
 Distributed under the Apache-2 license. See ``LICENSE`` for more information.
 
