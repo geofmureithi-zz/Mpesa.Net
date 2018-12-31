@@ -4,6 +4,14 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <RootNamespace>Safaricom</RootNamespace>
     <OutputType>Library</OutputType>
+    <PackageId>Mpesa.Net</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Geoffrey Mureithi</Authors>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Summary>A Daraja Rest API .Net Library written in C#. Well documented and Unit tested.</Summary>
+    <PackageTags>Mpesa, Mobile Money, Safaricom, Payments</PackageTags>
+    <Title>Mpesa.Net</Title>
+    <Owners>Geoffrey Mureithi</Owners>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,7 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Safaricom\Requests\B2BRequest.cs" />
     <Compile Remove="MpesaTests\UnitTest1.cs" />
     <Compile Remove="MpesaTests\obj\Debug\netcoreapp2.1\MpesaTests.AssemblyInfo.cs" />
     <Compile Remove="MpesaTests\obj\Debug\netcoreapp2.1\MpesaTests.Program.cs" />
