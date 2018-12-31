@@ -1,0 +1,450 @@
+{
+  "homepages": [],
+  "source_base_path": "/Users/geoff/Personal/c-sharp-mpesa-lib/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.Api.Env.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.Api.Env.html",
+          "hash": "I5w0xeZWvJRdfMPu8oUotA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.Api.ExtraConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.Api.ExtraConfig.html",
+          "hash": "NRtOY4uZcQ8qB+3BZiUTEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.Api.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.Api.html",
+          "hash": "tOccFhfy67vq3nHtlVthwA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.Helpers.CommandID.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.Helpers.CommandID.html",
+          "hash": "g0142MIl21m1vde+FG31QA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.Helpers.IdentityParty.IdentifierType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.Helpers.IdentityParty.IdentifierType.html",
+          "hash": "bBZOyAV+zdrMD8r1/fkZDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.Helpers.IdentityParty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.Helpers.IdentityParty.html",
+          "hash": "2eV2LqNs+wRXgP+Kb2Jfng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.Helpers.html",
+          "hash": "LEGqHcfifMx6zpS543z6eA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.Responses.AccountBalanceResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.Responses.AccountBalanceResponse.html",
+          "hash": "t7x4oWxDeChmIUIQHFwHFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.Responses.AuthResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.Responses.AuthResponse.html",
+          "hash": "3YiULp2wtt+uJsyRfFsDww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.Responses.B2BResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.Responses.B2BResponse.html",
+          "hash": "/3ltYvtXA9WBFDmBDV39cA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.Responses.B2CResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.Responses.B2CResponse.html",
+          "hash": "Numn0VN/RQSnYmr5jFnJ9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.Responses.C2BRegisterResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.Responses.C2BRegisterResponse.html",
+          "hash": "c3kXmj5y9HE1hO3KddqgiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.Responses.C2BSimulateResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.Responses.C2BSimulateResponse.html",
+          "hash": "0lCqIcoR8ZVKTHyMOBomqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.Responses.GenericResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.Responses.GenericResponse.html",
+          "hash": "oHM8MiqOmuN2RNlqzkJeJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.Responses.LNMPaymentResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.Responses.LNMPaymentResponse.html",
+          "hash": "5Endm31Bs7PFE0sbK3AbDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.Responses.LNMQueryResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.Responses.LNMQueryResponse.html",
+          "hash": "GvqBHNvYKAXxNZWPFpgwmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.Responses.ReversalResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.Responses.ReversalResponse.html",
+          "hash": "Dmt1xpKwWdDXVuqI/eG8rQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.Responses.TransactionStatusResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.Responses.TransactionStatusResponse.html",
+          "hash": "Oj/LOSHhRlxpLZBcpkf5eQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.Responses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.Responses.html",
+          "hash": "vmqK5Vnyrldu8c3FBxR2Qw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Safaricom.Mpesa.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Safaricom.Mpesa.html",
+          "hash": "+lGcTI7TJF7aihaTVQHDDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "Q6MuHYWpzqDxybPu2hmpig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "9KZnyzKJszycQl0sLeJNSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started.html",
+          "hash": "wcezrG3znLK48UN5uQGc7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/install.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/install.html",
+          "hash": "LJikXCtaVPij1PGK2Yk1mQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/terminology.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/terminology.html",
+          "hash": "/FbD9eXMbBZlmCFtZQLr+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "XeBNFmRbrCCN2I9gqcvo7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/transact.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/transact.html",
+          "hash": "XHc/bYSx0UpgZlGlqz27gg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/creds.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/creds.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/ico.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/ico.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo-small.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo-small.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/terminology.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/terminology.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "gGuuYdCK869SJ5y3YuuyqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "Z1QbRu+WE3dWcEPZSBHFHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

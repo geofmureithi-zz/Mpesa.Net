@@ -34,11 +34,35 @@ namespace Safaricom.Mpesa
         /// </summary>
         public class ExtraConfig
         {
+            /// <summary>
+            /// Gets or sets the short code.
+            /// </summary>
+            /// <value>The short code.</value>
             public int ShortCode { get; set; }
+            /// <summary>
+            /// Gets or sets the initiator.
+            /// </summary>
+            /// <value>The initiator.</value>
             public string Initiator { get; set; }
+            /// <summary>
+            /// Gets or sets the LNM Short code.
+            /// </summary>
+            /// <value>The LNMS hort code.</value>
             public int LNMShortCode { get; set; }
+            /// <summary>
+            /// Gets or sets the LNM Password.
+            /// </summary>
+            /// <value>The LNMP ass word.</value>
             public string LNMPassWord { get; set; }
+            /// <summary>
+            /// Gets or sets the security credential.
+            /// </summary>
+            /// <value>The security credential.</value>
             public string SecurityCredential { get; set; }
+            /// <summary>
+            /// Gets or sets the cert path.
+            /// </summary>
+            /// <value>Path to Mpesa Public Key</value>
             public string CertPath { get; set; }
         }
 
@@ -69,10 +93,7 @@ namespace Safaricom.Mpesa
             Environment = env;
             ConsumerKey = consumerKey;
             ConsumerSecret = consumerSecret;
-            client = new RestClient(env.Endpoint)
-            {
-                Proxy = new WebProxy("127.0.0.1", 8008)
-            };
+            client = new RestClient(env.Endpoint);
             if (config != null)
                 Config = config;
 
@@ -142,7 +163,7 @@ namespace Safaricom.Mpesa
         /// <summary>
         /// Async OAuth.
         /// </summary>
-        /// <returns>The creds.</returns>
+        /// <returns>The credentials awaitable.</returns>
         /// <example>
         /// <code>
         /// Api mpesa = new Api(Env.Sandbox, "consumerKey", "consumerSecret", configs);
@@ -158,7 +179,7 @@ namespace Safaricom.Mpesa
         /// <summary>
         /// Accounts the balance.
         /// </summary>
-        /// <returns>The balance.</returns>
+        /// <returns>The balance awaitable.</returns>
         /// <param name="partyA">The account you are checking balance for</param>
         /// <param name="queueUrl">Queue URL.</param>
         /// <param name="resultUrl">Result URL.</param>

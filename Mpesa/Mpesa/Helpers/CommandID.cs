@@ -27,7 +27,16 @@ namespace Safaricom.Mpesa.Helpers
         {
             return Command;
         }
+        /// <summary>
+        /// Gets the transaction reversal.
+        /// </summary>
+        /// <value>Reversal for an erroneous C2B transaction.</value>
         public static CommandID TransactionReversal { get { return new CommandID("TransactionReversal", "Reversal for an erroneous C2B transaction.");  } }
+
+        /// <summary>
+        /// Gets the salary payment.
+        /// </summary>
+        /// <value>Used to send money from an employer to employees e.g. salaries</value>
         public static CommandID SalaryPayment { get { return new CommandID("SalaryPayment", "Used to send money from an employer to employees e.g. salaries"); } }
         public static CommandID BusinessPayment { get { return new CommandID("BusinessPayment", "Used to send money from business to customer e.g. refunds."); } }
         public static CommandID PromotionPayment { get { return new CommandID("PromotionPayment", "Used to send money when promotions take place e.g. raffle winners"); } }
