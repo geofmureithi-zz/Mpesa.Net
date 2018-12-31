@@ -1,11 +1,11 @@
-﻿using System;
-using RestSharp.Deserializers;
+﻿using RestSharp.Deserializers;
+
 namespace Safaricom.Mpesa.Responses
 {
     /// <summary>
-    /// B2B Response.
+    /// Transaction status response.
     /// </summary>
-    public class B2BResponse : GenericResponse
+    public class TransactionStatusResponse
     {
         /// <summary>
         /// Gets or sets the response code.

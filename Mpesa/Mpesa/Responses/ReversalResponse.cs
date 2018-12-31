@@ -1,11 +1,12 @@
 ﻿using System;
 using RestSharp.Deserializers;
+
 namespace Safaricom.Mpesa.Responses
 {
     /// <summary>
-    /// B2B Response.
+    /// Reversal response.
     /// </summary>
-    public class B2BResponse : GenericResponse
+    public class ReversalResponse
     {
         /// <summary>
         /// Gets or sets the response code.

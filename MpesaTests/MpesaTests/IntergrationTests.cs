@@ -35,15 +35,5 @@ namespace MpesaTests
                 with.HttpRequest();
             });
         }
-
-        public static void OnC2B()
-        {
-            Console.WriteLine("Mouse");
-        }
-
-        [Fact]
-        public void Test(){
-            Assert.Equal(1, 1);
-        }
     }
 }
