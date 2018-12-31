@@ -80,7 +80,7 @@ Distributed under the Apache-2 license. See ``LICENSE`` for more information.
 5. Create a new Pull Request
 
 <!-- Markdown link & img dfn's -->
-[nuget-image]:https://img.shields.io/nuget/v/Mpesa.Net?style=flat-square
+[nuget-image]:https://img.shields.io/nuget/v/Mpesa.Net.svg?style=flat-square
 [nuget-url]: https://www.nuget.org/packages/Mpesa.Net/
 [nuget-downloads]:https://img.shields.io/nuget/dt/Mpesa.Net.svg?style=flat-square
 [travis-image]: https://img.shields.io/travis/geofmureithi/Mpesa.Net/master.svg?style=flat-square
