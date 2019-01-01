@@ -1,6 +1,15 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: getting-started
+  name: Quick Start
+  href: articles/getting-started.html
+- uid: home
+  name: "Mpesa.Net \U0001F4B8"
+  href: index.html
+- uid: install
+  name: Installation
+  href: articles/install.html
 - uid: Safaricom.Mpesa
   name: Safaricom.Mpesa
   href: api/Safaricom.Mpesa.html
@@ -246,19 +255,19 @@ references:
   isSpec: "True"
   fullName: Safaricom.Mpesa.Api.ExtraConfig.ShortCode
   nameWithType: Api.ExtraConfig.ShortCode
-- uid: Safaricom.Mpesa.Api.getSecurityCredential
-  name: getSecurityCredential()
-  href: api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_getSecurityCredential
-  commentId: M:Safaricom.Mpesa.Api.getSecurityCredential
-  fullName: Safaricom.Mpesa.Api.getSecurityCredential()
-  nameWithType: Api.getSecurityCredential()
-- uid: Safaricom.Mpesa.Api.getSecurityCredential*
-  name: getSecurityCredential
-  href: api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_getSecurityCredential_
-  commentId: Overload:Safaricom.Mpesa.Api.getSecurityCredential
+- uid: Safaricom.Mpesa.Api.GetSecurityCredential
+  name: GetSecurityCredential()
+  href: api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_GetSecurityCredential
+  commentId: M:Safaricom.Mpesa.Api.GetSecurityCredential
+  fullName: Safaricom.Mpesa.Api.GetSecurityCredential()
+  nameWithType: Api.GetSecurityCredential()
+- uid: Safaricom.Mpesa.Api.GetSecurityCredential*
+  name: GetSecurityCredential
+  href: api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_GetSecurityCredential_
+  commentId: Overload:Safaricom.Mpesa.Api.GetSecurityCredential
   isSpec: "True"
-  fullName: Safaricom.Mpesa.Api.getSecurityCredential
-  nameWithType: Api.getSecurityCredential
+  fullName: Safaricom.Mpesa.Api.GetSecurityCredential
+  nameWithType: Api.GetSecurityCredential
 - uid: Safaricom.Mpesa.Api.LipaNaMpesaOnline(System.Int64,System.Int32,System.String,System.String,System.String)
   name: LipaNaMpesaOnline(Int64, Int32, String, String, String)
   href: api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_LipaNaMpesaOnline_System_Int64_System_Int32_System_String_System_String_System_String_
@@ -919,3 +928,9 @@ references:
   isSpec: "True"
   fullName: Safaricom.Mpesa.Responses.TransactionStatusResponse.ResponseCode
   nameWithType: TransactionStatusResponse.ResponseCode
+- uid: terminology
+  name: Mpesa Terminology
+  href: articles/terminology.html
+- uid: transact
+  name: Transactions & Requests
+  href: articles/transact.html

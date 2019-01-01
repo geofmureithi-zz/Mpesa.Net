@@ -1,9 +1,11 @@
+---
+uid: install
+---
 # Installation
 
 This assumes you have `dotnet` installed
 
-We recommend using Nuget
-Current version: ![](https://img.shields.io/nuget/v/Mpesa.Net.svg?style=flat-square)
+We recommend using Nuget. Current version: ![](https://img.shields.io/nuget/v/Mpesa.Net.svg?style=flat-square)
 ```sh
 $ dotnet add package Mpesa.Net --version {current version}
 ```
@@ -31,4 +33,4 @@ For Documentation generation you will need [DocFX](https://dotnet.github.io/docf
 5. Create a new Pull Request
 
 
-Now head to [Getting Started](/articles/getting-started.html)
+Now head to [Getting Started](xref:getting-started)

@@ -76,7 +76,7 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="transact">
 <h1 id="transactions--requests">Transactions &amp; Requests</h1>
 
 <p>This page will be divided into three major segments:</p>
@@ -88,7 +88,7 @@
 <p>Before we begin, it is good to appreciate that almost of all Daraja Transactions are asynchronous meaning that you will usually be waiting for callbacks on <code>queURL</code> etc.
 In the same sprit, apart from OAuth, all other transactions will return an <code>awaitable</code> (<code>System.Threading.Tasks.Task</code>)</p>
 <p>The resolved response will interface <code>RestSharp.IRestResponse&lt;T&gt;</code> where <code>T</code> is determined by the specific transaction.
-Checkout the different <a href="/api/Safaricom.Mpesa.Responses.html">response types</a> we have.</p>
+Checkout the different <a class="xref" href="../api/Safaricom.Mpesa.Responses.html">response types</a> we have.</p>
 <h2 id="lipa-na-mpesa">Lipa Na Mpesa</h2>
 <p>To use these APIs make sure that <code>LNMShortCode &amp; LNMPassWord</code> are set.</p>
 <h2 id="lnm-payment">LNM Payment</h2>
@@ -107,9 +107,9 @@ var transactionId = res.Data.ConversationID;
 </code></pre>
 <p><em>See Also:</em></p>
 <ul>
-<li><a href="/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_AccountBalance_">AccountBalance API documentation</a></li>
+<li><a class="xref" href="../api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_AccountBalance_">AccountBalance API documentation</a></li>
 <li>The expected <a href="https://developer.safaricom.co.ke/docs?json#account-balance-api">Daraja AccountBalance Callback Response</a> to the <code>resultURL</code>.</li>
-<li><a href="/api/Safaricom.Mpesa.Responses.AccountBalanceResponse.html"> AccountBalance API Response</a></li>
+<li><a class="xref" href="../api/Safaricom.Mpesa.Responses.AccountBalanceResponse.html"> AccountBalance API Response</a></li>
 </ul>
 <h3 id="authentication">Authentication</h3>
 <p>Daraja uses OAuth2.0 hence expects a header <code>&quot;Authorization&quot;, &quot;Basic &quot; + encoded&quot;</code>.
@@ -124,34 +124,34 @@ var token = res.Data.AccessToken
 </code></pre>
 <p><em>See Also:</em></p>
 <ul>
-<li><a href="/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_Auth_">Auth API Documentation</a></li>
-<li><a href="/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_AuthAsync_">Auth Async API Documentation</a></li>
+<li><a class="xref" href="../api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_Auth_">Auth API Documentation</a></li>
+<li><a class="xref" href="../api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_AuthAsync_">Auth Async API Documentation</a></li>
 <li>The expected <a href="https://developer.safaricom.co.ke/docs?json#authentication">Daraja Callback Response</a></li>
-<li><a href="/api/Safaricom.Mpesa.Responses.AuthResponse.html">Auth API Response</a></li>
+<li><a class="xref" href="../api/Safaricom.Mpesa.Responses.AuthResponse.html">Auth API Response</a></li>
 </ul>
 <h3 id="c2b-register">C2B Register</h3>
-<p>In the <a href="/articles/terminology.html">Terminology</a> page, we have discussed several terms and noted that C2B transactions are triggered by the user.
-This call is used to register the validation and confirmation URLs and can only be run once in <a href="/api/Safaricom.Mpesa.Api.Env.html#Safaricom_Mpesa_Api_Env_Production">Production Environment</a>, so use it smartly. You can always consult Daraja and request changes, though this may take time.</p>
+<p>In the <a class="xref" href="terminology.html">Terminology</a> page, we have discussed several terms and noted that C2B transactions are triggered by the user.
+This call is used to register the validation and confirmation URLs and can only be run once in <a class="xref" href="../api/Safaricom.Mpesa.Api.Env.html#Safaricom_Mpesa_Api_Env_Production">Production Environment</a>, so use it smartly. You can always consult Daraja and request changes, though this may take time.</p>
 <pre><code class="lang-c#">var res = await mpesa.C2BRegister(confirmationURL, validationURL)
 var transactionId = res.Data.ConversationID;
 </code></pre>
 <p><em>See Also:</em></p>
 <ul>
-<li><a href="/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_C2BRegister_">C2BRegister API Documentation</a></li>
+<li><a class="xref" href="../api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_C2BRegister_">C2BRegister API Documentation</a></li>
 <li>The expected <a href="https://developer.safaricom.co.ke/docs?json#c2b-api">Daraja Responses</a></li>
-<li><a href="/api/Safaricom.Mpesa.Responses.C2BRegisterResponse.html">C2BRegister API Response</a></li>
+<li><a class="xref" href="../api/Safaricom.Mpesa.Responses.C2BRegisterResponse.html">C2BRegister API Response</a></li>
 </ul>
 <h3 id="reversal">Reversal</h3>
-<p>Sometimes you just want your money back(We wont judge ;)) and hence the <a href="/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_ReversalRequest_">Reversal</a> Api.</p>
+<p>Sometimes you just want your money back(We wont judge ;)) and hence the <a class="xref" href="../api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_ReversalRequest_">Reversal</a> Api.</p>
 <pre><code class="lang-c#">Api mpesa = new Api(Env.Sandbox, &quot;consumerKey&quot;, &quot;consumerSecret&quot;, configs);
 var res = await mpesa.ReversalRequest(&quot;LKXXXX1234&quot;, 100, queueUrl, resultUrl );
 var transactionId = res.Data.ConversationID;
 </code></pre>
 <p><em>See Also:</em></p>
 <ul>
-<li><a href="/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_Reversal_">Reversal API Documentation</a></li>
+<li><a class="xref" href="../api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_Reversal">Reversal API Documentation</a></li>
 <li>The expected <a href="https://developer.safaricom.co.ke/docs?json#reversal">Daraja Responses</a></li>
-<li><a href="/api/Safaricom.Mpesa.Responses.ReversalResponse.html">Reversal API Response</a></li>
+<li><a class="xref" href="../api/Safaricom.Mpesa.Responses.ReversalResponse.html">Reversal API Response</a></li>
 </ul>
 <h3 id="transction-status">Transction Status</h3>
 <p>The Transaction Status API is a very powerful API that can be important when you did not get the callback.</p>
@@ -161,9 +161,9 @@ var transactionId = res.Data.ConversationID;
 </code></pre>
 <p><em>See Also:</em></p>
 <ul>
-<li><a href="/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_TransactionStatus_">TransactionStatus API Documentation</a></li>
+<li><a class="xref" href="../api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_TransactionStatus_">TransactionStatus API Documentation</a></li>
 <li>The expected <a href="https://developer.safaricom.co.ke/docs?json#transaction-status">Daraja Responses</a></li>
-<li><a href="/api/Safaricom.Mpesa.Responses.TransactionStatusResponse.html">TransactionStatus API Response</a></li>
+<li><a class="xref" href="../api/Safaricom.Mpesa.Responses.TransactionStatusResponse.html">TransactionStatus API Response</a></li>
 </ul>
 </article>
           </div>

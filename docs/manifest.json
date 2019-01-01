@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Safaricom.Mpesa.Api.ExtraConfig.html",
-          "hash": "NRtOY4uZcQ8qB+3BZiUTEQ=="
+          "hash": "7H/EYLSUM5F6HgH4hC6yWQ=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Safaricom.Mpesa.Api.html",
-          "hash": "tOccFhfy67vq3nHtlVthwA=="
+          "hash": "71aHZ6udQ0lKK+VjBRn8pA=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Safaricom.Mpesa.Helpers.CommandID.html",
-          "hash": "g0142MIl21m1vde+FG31QA=="
+          "hash": "xeV7dnhLp2pOoh45kZk1RQ=="
         }
       },
       "is_incremental": false,
@@ -174,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Safaricom.Mpesa.Responses.GenericResponse.html",
-          "hash": "oHM8MiqOmuN2RNlqzkJeJA=="
+          "hash": "abY97Dhif0ayp7hyba9Nlw=="
         }
       },
       "is_incremental": false,
@@ -210,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Safaricom.Mpesa.Responses.ReversalResponse.html",
-          "hash": "Dmt1xpKwWdDXVuqI/eG8rQ=="
+          "hash": "ZvtaU81g+1hRw+uA7hMD9w=="
         }
       },
       "is_incremental": false,
@@ -258,7 +258,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "Q6MuHYWpzqDxybPu2hmpig=="
+          "hash": "NcmtZr0ZMUrdcCJ+9XnVgQ=="
         }
       },
       "is_incremental": false,
@@ -282,7 +282,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/getting-started.html",
-          "hash": "wcezrG3znLK48UN5uQGc7w=="
+          "hash": "eK1lK4KTBm2i3WJ2/r1bug=="
         }
       },
       "is_incremental": false,
@@ -294,7 +294,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/install.html",
-          "hash": "LJikXCtaVPij1PGK2Yk1mQ=="
+          "hash": "T71558XmEEijW0EqHe36lA=="
         }
       },
       "is_incremental": false,
@@ -306,7 +306,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/terminology.html",
-          "hash": "/FbD9eXMbBZlmCFtZQLr+A=="
+          "hash": "3E3l2m1UWwnFoQWXWfGM9g=="
         }
       },
       "is_incremental": false,
@@ -330,7 +330,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/transact.html",
-          "hash": "XHc/bYSx0UpgZlGlqz27gg=="
+          "hash": "qJ68C8EvpgGipmfKQ23gzw=="
         }
       },
       "is_incremental": false,
@@ -386,7 +386,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "gGuuYdCK869SJ5y3YuuyqQ=="
+          "hash": "IHFP98lKX1XLtA/9m/PVyQ=="
         }
       },
       "is_incremental": false,
@@ -417,17 +417,17 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
