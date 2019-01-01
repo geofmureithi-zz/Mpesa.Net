@@ -30,7 +30,7 @@ ExtraConfig configs = new ExtraConfig
 Api mpesa = new Api(Env.Sandbox, "consumerKey", "consumerSecret", configs);
 ```
 
-_For more examples and usage, please refer to the [Wiki][wiki]._
+_For more examples and usage, please refer to the [Documentation](https://mureithi.me/Mpesa.Net/)._
 
 ## APIs
 - [x] OAuth
