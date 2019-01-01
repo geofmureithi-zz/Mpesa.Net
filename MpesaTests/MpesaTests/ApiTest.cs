@@ -9,6 +9,7 @@ namespace MpesaTests
     {
         private static readonly string FakeURL = "https://example.co.ke/url";
         private static readonly long msisdn = 254712345678;
+        public Api mpesa;
         private static readonly ExtraConfig configs = new ExtraConfig
         {
             ShortCode = 600111,
@@ -18,7 +19,12 @@ namespace MpesaTests
             SecurityCredential = "Safaricom111!",
             CertPath = "~/c-sharp-mpesa-lib/Mpesa/cert.cer"
         };
-        Api mpesa = new Api(Env.Sandbox, "OT13kmfq1I8GcD2D4JIcyrHO7C3IAM81", "nxKU4f4Zq6h1urLD", configs);
+
+        public ApiTest()
+        {
+            mpesa = new Api(Env.Sandbox, "OT13kmfq1I8GcD2D4JIcyrHO7C3IAM81", "nxKU4f4Zq6h1urLD", configs);
+        }
+
 
         [Fact]
         public void AuthTest()

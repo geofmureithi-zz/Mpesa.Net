@@ -1,6 +1,6 @@
 language: csharp
 solution: c-sharp-mpesa-lib.sln
-dotnet: 2.1.502
+dotnet: 2.1.302
 script:
 - dotnet restore
 - dotnet test
