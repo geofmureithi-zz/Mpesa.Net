@@ -4,4 +4,6 @@ dotnet: 2.1.302
 script:
 - dotnet restore
 - dotnet test
-
+cache:
+    directories:
+     - /home/travis/.nuget/
