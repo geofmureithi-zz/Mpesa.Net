@@ -1,3 +1,6 @@
+---
+uid: getting-started
+---
 # Quick Start
 ## Some few notes
 This library is built to make your work easier.
@@ -10,9 +13,9 @@ Feel free to submit a PR to improve this.
 var mpesaAPI = new Api(Api.Env.SANDBOX, "consumerKey", "consumerSecret", Extra config = null);
 ```
 From the example above we can note that we basically need:
-1. [Env](/api/Safaricom.Mpesa.Api.Env.html) is the environment which transactions will executed ie `Sandbox | Production`
+1. [Env](xref:Safaricom.Mpesa.Api.Env) is the environment which transactions will executed ie `Sandbox | Production`
 2. ConsumerKey and ConsumerSecret provided from Daraja. See [Authentication](https://developer.safaricom.co.ke/docs?json#authentication)
-3. [Extra Config](/api/Safaricom.Mpesa.Api.ExtraConfig.html) includes configs used for LNM & security credential transactions. It is *RECOMMENDED* though optional (most transactions will need some of those configs).  
+3. [Extra Config](xref:Safaricom.Mpesa.Api.ExtraConfig) includes configs used for LNM & security credential transactions. It is *RECOMMENDED* though optional (most transactions will need some of those configs).  
 Below is an example:
 
 ```c#
@@ -43,4 +46,4 @@ var sandboxAPI = new Api(Api.Env.Sandbox, "consumerKey2", "consumerSecret2", Ext
 ```
 Each instance is exclusive of the other.
 
-Now head to [Doing Transctions](/articles/transact.html)
+Now head to [Doing Transctions](xref:transact)

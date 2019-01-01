@@ -76,7 +76,7 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="getting-started">
 <h1 id="quick-start">Quick Start</h1>
 
 <h2 id="some-few-notes">Some few notes</h2>
@@ -89,9 +89,9 @@ Feel free to submit a PR to improve this.</p>
 </code></pre>
 <p>From the example above we can note that we basically need:</p>
 <ol>
-<li><a href="/api/Safaricom.Mpesa.Api.Env.html">Env</a> is the environment which transactions will executed ie <code>Sandbox | Production</code></li>
+<li><a class="xref" href="../api/Safaricom.Mpesa.Api.Env.html">Env</a> is the environment which transactions will executed ie <code>Sandbox | Production</code></li>
 <li>ConsumerKey and ConsumerSecret provided from Daraja. See <a href="https://developer.safaricom.co.ke/docs?json#authentication">Authentication</a></li>
-<li><a href="/api/Safaricom.Mpesa.Api.ExtraConfig.html">Extra Config</a> includes configs used for LNM &amp; security credential transactions. It is <em>RECOMMENDED</em> though optional (most transactions will need some of those configs).<br>
+<li><a class="xref" href="../api/Safaricom.Mpesa.Api.ExtraConfig.html">Extra Config</a> includes configs used for LNM &amp; security credential transactions. It is <em>RECOMMENDED</em> though optional (most transactions will need some of those configs).<br>
 Below is an example:</li>
 </ol>
 <pre><code class="lang-c#"> ExtraConfig configs = new ExtraConfig
@@ -115,7 +115,7 @@ See image below:
 var sandboxAPI = new Api(Api.Env.Sandbox, &quot;consumerKey2&quot;, &quot;consumerSecret2&quot;, Extra config = null);
 </code></pre>
 <p>Each instance is exclusive of the other.</p>
-<p>Now head to <a href="/articles/transact.html">Doing Transctions</a></p>
+<p>Now head to <a class="xref" href="transact.html">Doing Transctions</a></p>
 </article>
           </div>
           <div class="contribution-panel mobile-hide">

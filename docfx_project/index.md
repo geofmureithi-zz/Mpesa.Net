@@ -1,3 +1,6 @@
+---
+uid: home
+---
 # Mpesa.Net 💸
 > An Mpesa Library for .Net
 
@@ -18,4 +21,4 @@ Licenced under [Apache2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
 Lets get Transacting!
 
-Now head to [Installation](/articles/install.html)
+Now head to [Installation](xref:install)

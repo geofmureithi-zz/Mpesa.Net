@@ -1,3 +1,7 @@
+---
+uid: transact
+---
+
 # Transactions & Requests
 This page will be divided into three major segments:
 - LNM Transactions
@@ -8,7 +12,7 @@ Before we begin, it is good to appreciate that almost of all Daraja Transactions
 In the same sprit, apart from OAuth, all other transactions will return an `awaitable` (`System.Threading.Tasks.Task`)
 
 The resolved response will interface `RestSharp.IRestResponse<T>` where `T` is determined by the specific transaction.
-Checkout the different [response types](/api/Safaricom.Mpesa.Responses.html) we have.
+Checkout the different [response types](xref:Safaricom.Mpesa.Responses) we have.
 
 ## Lipa Na Mpesa
 
@@ -34,9 +38,9 @@ var res = await mpesa.AccountBalance(partyA, "some URL", "some URL");
 var transactionId = res.Data.ConversationID;
 ```
 _See Also:_
-- [AccountBalance API documentation](/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_AccountBalance_)
+- [AccountBalance API documentation](xref:Safaricom.Mpesa.Api#Safaricom_Mpesa_Api_AccountBalance_)
 - The expected [Daraja AccountBalance Callback Response](https://developer.safaricom.co.ke/docs?json#account-balance-api) to the `resultURL`.
-- [ AccountBalance API Response](/api/Safaricom.Mpesa.Responses.AccountBalanceResponse.html)
+- [ AccountBalance API Response](xref:Safaricom.Mpesa.Responses.AccountBalanceResponse)
 
 ### Authentication
 Daraja uses OAuth2.0 hence expects a header `"Authorization", "Basic " + encoded"`.
@@ -52,26 +56,26 @@ var res = await mpesa.AuthAsync();
 var token = res.Data.AccessToken
 ```
 _See Also:_
-- [Auth API Documentation](/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_Auth_)
-- [Auth Async API Documentation](/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_AuthAsync_)
+- [Auth API Documentation](xref:Safaricom.Mpesa.Api#Safaricom_Mpesa_Api_Auth_)
+- [Auth Async API Documentation](xref:Safaricom.Mpesa.Api#Safaricom_Mpesa_Api_AuthAsync_)
 - The expected [Daraja Callback Response](https://developer.safaricom.co.ke/docs?json#authentication)
-- [Auth API Response](/api/Safaricom.Mpesa.Responses.AuthResponse.html)
+- [Auth API Response](xref:Safaricom.Mpesa.Responses.AuthResponse)
 
 ### C2B Register
-In the [Terminology](/articles/terminology.html) page, we have discussed several terms and noted that C2B transactions are triggered by the user.
-This call is used to register the validation and confirmation URLs and can only be run once in [Production Environment](/api/Safaricom.Mpesa.Api.Env.html#Safaricom_Mpesa_Api_Env_Production), so use it smartly. You can always consult Daraja and request changes, though this may take time.
+In the [Terminology](xref:terminology) page, we have discussed several terms and noted that C2B transactions are triggered by the user.
+This call is used to register the validation and confirmation URLs and can only be run once in [Production Environment](xref:Safaricom.Mpesa.Api.Env#Safaricom_Mpesa_Api_Env_Production), so use it smartly. You can always consult Daraja and request changes, though this may take time.
 
 ```c#
 var res = await mpesa.C2BRegister(confirmationURL, validationURL)
 var transactionId = res.Data.ConversationID;
 ```
 _See Also:_
-- [C2BRegister API Documentation](/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_C2BRegister_)
+- [C2BRegister API Documentation](xref:Safaricom.Mpesa.Api#Safaricom_Mpesa_Api_C2BRegister_)
 - The expected [Daraja Responses](https://developer.safaricom.co.ke/docs?json#c2b-api)
-- [C2BRegister API Response](/api/Safaricom.Mpesa.Responses.C2BRegisterResponse.html)
+- [C2BRegister API Response](xref:Safaricom.Mpesa.Responses.C2BRegisterResponse)
 
 ### Reversal
-Sometimes you just want your money back(We wont judge ;)) and hence the [Reversal](/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_ReversalRequest_) Api.
+Sometimes you just want your money back(We wont judge ;)) and hence the [Reversal](xref:Safaricom.Mpesa.Api#Safaricom_Mpesa_Api_ReversalRequest_) Api.
 
 ```c#
 Api mpesa = new Api(Env.Sandbox, "consumerKey", "consumerSecret", configs);
@@ -79,9 +83,9 @@ var res = await mpesa.ReversalRequest("LKXXXX1234", 100, queueUrl, resultUrl );
 var transactionId = res.Data.ConversationID;
 ```
 _See Also:_
-- [Reversal API Documentation](/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_Reversal_)
+- [Reversal API Documentation](xref:Safaricom.Mpesa.Api#Safaricom_Mpesa_Api_Reversal)
 - The expected [Daraja Responses](https://developer.safaricom.co.ke/docs?json#reversal)
-- [Reversal API Response](/api/Safaricom.Mpesa.Responses.ReversalResponse.html)
+- [Reversal API Response](xref:Safaricom.Mpesa.Responses.ReversalResponse)
 
 ### Transction Status
 The Transaction Status API is a very powerful API that can be important when you did not get the callback.
@@ -92,6 +96,6 @@ var res = await mpesa.TransactionStatus("MKXXXX1234", queueUrl, resultUrl );
 var transactionId = res.Data.ConversationID;
 ```
 _See Also:_
-- [TransactionStatus API Documentation](/api/Safaricom.Mpesa.Api.html#Safaricom_Mpesa_Api_TransactionStatus_)
+- [TransactionStatus API Documentation](xref:Safaricom.Mpesa.Api#Safaricom_Mpesa_Api_TransactionStatus_)
 - The expected [Daraja Responses](https://developer.safaricom.co.ke/docs?json#transaction-status)
-- [TransactionStatus API Response](/api/Safaricom.Mpesa.Responses.TransactionStatusResponse.html)
+- [TransactionStatus API Response](xref:Safaricom.Mpesa.Responses.TransactionStatusResponse)

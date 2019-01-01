@@ -24,9 +24,9 @@ namespace Safaricom.Mpesa
     /// </summary>
     public class Api
     {
-        private Env Environment;
-        private string ConsumerKey;
-        private string ConsumerSecret;
+        private readonly Env Environment;
+        private readonly string ConsumerKey;
+        private readonly string ConsumerSecret;
         private RestClient client;
         private ExtraConfig Config;
         /// <summary>
@@ -47,12 +47,12 @@ namespace Safaricom.Mpesa
             /// <summary>
             /// Gets or sets the LNM Short code.
             /// </summary>
-            /// <value>The LNMS hort code.</value>
+            /// <value>The LNM Shortcode.</value>
             public int LNMShortCode { get; set; }
             /// <summary>
             /// Gets or sets the LNM Password.
             /// </summary>
-            /// <value>The LNMP ass word.</value>
+            /// <value>The LNMPassword.</value>
             public string LNMPassWord { get; set; }
             /// <summary>
             /// Gets or sets the security credential.
@@ -82,10 +82,10 @@ namespace Safaricom.Mpesa
         /// <param name="env">Env.</param>
         /// <param name="consumerKey">Consumer key.</param>
         /// <param name="consumerSecret">Consumer secret.</param>
-        /// <param name="config">Config.</param>
+        /// <param name="config">Configuration for LNM, Security credentials etc.</param>
         /// <example>
         /// <code>
-        /// Api mpesa = new Api(<paramref name="env"/>, <paramref name="consumerKey"/>, <paramref name="consumerSecret"/>, <paramref name="config"/>);
+        /// Api mpesa = new Api(Env.Sandbox, "Key", "Secret", null);
         /// </code>
         /// </example>
         public Api(Env env, string consumerKey, string consumerSecret, ExtraConfig config = null)
@@ -103,7 +103,7 @@ namespace Safaricom.Mpesa
         /// Gets the security credential.
         /// </summary>
         /// <returns>The security credential.</returns>
-        protected String getSecurityCredential()
+        protected String GetSecurityCredential()
         {
             byte[] plainTextBytes = Encoding.UTF8.GetBytes(Config.SecurityCredential);
 
@@ -202,7 +202,7 @@ namespace Safaricom.Mpesa
             request.AddJsonBody(new
             {
                 Config.Initiator,
-                SecurityCredential = getSecurityCredential(),
+                SecurityCredential = GetSecurityCredential(),
                 CommandID = CommandID.AccountBalance.ToString(),
                 PartyA = partyA.Party,
                 IdentifierType = partyA.Type,
@@ -269,7 +269,7 @@ namespace Safaricom.Mpesa
             request.AddJsonBody(new
             {
                 Config.Initiator,
-                SecurityCredential = getSecurityCredential(),
+                SecurityCredential = GetSecurityCredential(),
                 CommandID = (commandId ?? CommandID.BusinessToBusinessTransfer).ToString(),
                 SenderIdentifierType = IdentityParty.IdentifierType.SHORTCODE,
                 RecieverIdentifierType = receiverParty.Type,
@@ -342,7 +342,7 @@ namespace Safaricom.Mpesa
             request.AddJsonBody(new
             {
                 InitiatorName = Config.Initiator,
-                SecurityCredential = getSecurityCredential(),
+                SecurityCredential = GetSecurityCredential(),
                 CommandID = (commandId ?? CommandID.BusinessPayment).ToString(),
                 Amount = amount,
                 PartyA = Config.ShortCode,
@@ -446,7 +446,7 @@ namespace Safaricom.Mpesa
             request.AddJsonBody(new
             {
                 Config.Initiator,
-                SecurityCredential = getSecurityCredential(),
+                SecurityCredential = GetSecurityCredential(),
                 CommandID = CommandID.TransactionReversal.ToString(),
                 TransactionID = transactionId,
                 Amount = amount,
@@ -484,7 +484,7 @@ namespace Safaricom.Mpesa
             request.AddJsonBody(new
             {
                 Config.Initiator,
-                SecurityCredential = getSecurityCredential(),
+                SecurityCredential = GetSecurityCredential(),
                 CommandID = CommandID.TransactionStatusQuery.ToString(),
                 TransactionID = transactionId,
                 PartyA = receiverParty.Party,

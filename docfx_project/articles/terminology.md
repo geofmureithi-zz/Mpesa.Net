@@ -1,3 +1,6 @@
+---
+uid: terminology
+---
 # Mpesa Terminology
 
 ![Mpesa Terminology](https://media.giphy.com/media/122kVpDEBF1pWE/giphy-downsized.gif)
@@ -15,3 +18,5 @@ Since a lot of developers are working on M-Pesa outside Kenya, we thought it wou
 - *C2BSimulate*: Since C2B transactions are always started by the user. This denotes the mocking of user triggering the transaction.
 
 Feel free to improve this on Github!
+
+Go back [Home](xref:home) or [Getting Started](xref:getting-started)
