@@ -1,3 +1,6 @@
+# Archived
+Please use: https://github.com/safaricom/Mpesa.Net
+
 # Mpesa.Net 💸
 > An Mpesa Library for .Net
 
